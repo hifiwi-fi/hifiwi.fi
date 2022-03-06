@@ -2,7 +2,7 @@
 
 Internet products. Welcome.
 
-<img height='200' width='200' src='/media/logo.jpeg' alt='logo'>
+<img height='200' width='200' src='./media/logo.jpeg' alt='logo'>
 
 ## Products
 
