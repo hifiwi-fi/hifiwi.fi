@@ -1,5 +1,5 @@
 # hifiwi.fi
-[![Actions Status](https://github.com/bcomnes/hifiwi.fi/workflows/tests/badge.svg)](https://github.com/bcomnes/hifiwi.fi/actions)
+[![Actions Status](https://github.com/hifiwi-fi/hifiwi.fi/workflows/tests/badge.svg)](https://github.com/hifiwi-fi/hifiwi.fi/actions)
 
 Hifiwi.fi website.
 
