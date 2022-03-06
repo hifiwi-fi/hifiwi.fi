@@ -7,6 +7,7 @@ Internet products. Welcome.
 ## Products
 
 - 🥖 [breadcrum.net](https://breadcrum.net)
+- 📡 [gumcast](https://github.com/gumcast)
 
 ## Open source
 
@@ -24,3 +25,7 @@ Internet products. Welcome.
 ## Friends
 
 - 👬 [hypermodul.es](https://hypermodul.es)
+- 🛡 [Socket](https://socket.dev)
+- 📦 [css-pkg](https://css-pkg.github.io)
+- 📱 [Infinite Scroll](https://www.infinitescroll.org)
+- 🏝 [bits.coop](https://bits.coop)
