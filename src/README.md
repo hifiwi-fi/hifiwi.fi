@@ -6,19 +6,19 @@ Internet products. Welcome.
 
 ## Products
 
-- 🥖 [breadcrum.net](https://breadcrum.net)
-- 📡 [gumcast](https://gumcast.com)
+- 🥖 [breadcrum.net](https://breadcrum.net) — internet newspaper clippings
+- 📡 [gumcast](https://gumcast.com) — gumroad internet subscriptions
 
-## Open source
+## Open schematics
 
 - 🐈 [github.com/hifiwi-fi](https://github.com/hifiwi-fi/)
 
-## Social
+## Mailing address
 
 - 🐦 [@hifiwi_fi](https://twitter.com/hifiwi_fi)
 - 👨‍💼 [Linked In](https://www.linkedin.com/company/hifiwi-fi/)
 
-## People
+## Org chart
 
 - 🤦🏼‍♂️ [bret.io](https://bret.io)
 
