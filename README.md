@@ -1,7 +1,7 @@
 # hifiwi.fi
 [![Actions Status](https://github.com/hifiwi-fi/hifiwi.fi/workflows/tests/badge.svg)](https://github.com/hifiwi-fi/hifiwi.fi/actions)
 
-Hifiwi.fi website.
+[Hifiwi.fi](https://hifiwi.fi/) website.
 
 ## Usage
 
