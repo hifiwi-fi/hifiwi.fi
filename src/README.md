@@ -9,11 +9,11 @@ Internet products. Welcome.
 - 🥖 [breadcrum.net](https://breadcrum.net) — internet newspaper clippings shoebox
 - 📡 [gumcast](https://gumcast.com) — gumroad subscription courier 
 
-## Open schematics
+## Schematics
 
 - 🐈 [github.com/hifiwi-fi](https://github.com/hifiwi-fi/)
 
-## Mailing address
+## Mail room
 
 - 🐦 [@hifiwi_fi](https://twitter.com/hifiwi_fi)
 - 👨‍💼 [Linked In](https://www.linkedin.com/company/hifiwi-fi/)
