@@ -29,3 +29,5 @@ Internet products. Welcome.
 - 📦 [css-pkg](https://css-pkg.github.io)
 - 📱 [Infinite Scroll](https://www.infinitescroll.org)
 - 🏝 [bits.coop](https://bits.coop)
+- 📈 [Hyper DeFi](https://discord.gg/SAhprXfY)
+- 🇩🇰 [Hypercore Protocol](https://hypercore-protocol.org)
