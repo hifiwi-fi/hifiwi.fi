@@ -7,7 +7,7 @@ Internet products. Welcome.
 ## Products
 
 - 🥖 [breadcrum.net](https://breadcrum.net)
-- 📡 [gumcast](https://github.com/gumcast)
+- 📡 [gumcast](https://gumcast.com)
 
 ## Open source
 
