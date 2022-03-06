@@ -6,7 +6,7 @@ Internet products. Welcome.
 
 ## Products
 
-- 🥖 [breadcrum.net](https://breadcrum.net) — internet newspaper clippings shoebox
+- 🥖 [breadcrum.net](https://breadcrum.net) — internet newspaper clippings
 - 📡 [gumcast](https://gumcast.com) — gumroad subscription courier 
 
 ## Schematics
