@@ -35,4 +35,4 @@ Internet products. Welcome.
 - 🏝 [bits.coop](https://bits.coop)
 - 📈 [Hyper DeFi](https://discord.gg/SAhprXfY)
 - 🇩🇰 [Hypercore Protocol](https://hypercore-protocol.org)
-- 😸 [neocities](https://neocities.org)
+- 😸 [neocities](https://neocities.org/site/hifiwifi)
