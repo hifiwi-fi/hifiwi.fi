@@ -1,6 +1,6 @@
 # HifiWi.fi
 
-Internet products. Welcome.
+High-fidelity internet products. Welcome.
 
 <img height='200' width='200' src='./media/logo.jpeg' alt='logo'>
 
