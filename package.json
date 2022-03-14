@@ -2,7 +2,7 @@
   "name": "hifiwi.fi",
   "description": "HifiWi.fi website",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "author": "Bret Comnes <bcomnes@gmail.com> (https://bret.io)",
   "bugs": {
