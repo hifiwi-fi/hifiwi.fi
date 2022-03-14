@@ -16,7 +16,9 @@
     "rimraf": "^3.0.2",
     "snazzy": "^9.0.0",
     "standard": "^16.0.0",
-    "uland-isomorphic": "^1.0.0"
+    "uland-isomorphic": "^1.0.0",
+    "auto-changelog": "^2.0.0",
+    "gh-release": "^6.0.0"
   },
   "dependencies": {
     "fragmentions": "^1.1.3",
@@ -41,7 +43,11 @@
     "watch:siteup": "npm run build:siteup -- --watch",
     "generate-icon": "npx gravatar-favicons --config favicon-config.cjs",
     "clean": "rimraf public && mkdirp public",
-    "start": "npm run watch"
+    "start": "npm run watch",
+    "release": "git push --follow-tags && gh-release -y",
+    "version": "run-s version:*",
+    "version:changelog": "auto-changelog -p --template keepachangelog auto-changelog --breaking-pattern 'BREAKING CHANGE:'",
+    "version:git": "git add CHANGELOG.md"
   },
   "standard": {
     "ignore": [
