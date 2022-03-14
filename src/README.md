@@ -1,3 +1,6 @@
+---
+title: ''
+---
 # HifiWi.fi
 
 High-fidelity internet products. Welcome.

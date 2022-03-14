@@ -2,8 +2,7 @@ import { html, render } from 'uland-isomorphic'
 
 export default function rootLayout ({
   title,
-  siteName = 'Siteup',
-  defaultStyle = true,
+  siteName,
   scripts,
   styles,
   children
@@ -24,17 +23,6 @@ export default function rootLayout ({
         : null}
       ${styles
         ? styles.map(style => html`<link rel="stylesheet" href=${style} />`)
-        : null}
-      ${defaultStyle
-        ? html`
-            <link rel="stylesheet" href="https://unpkg.com/mine.css@^4/dist/mine.css" />
-            <link rel="stylesheet" href="https://unpkg.com/mine.css@^4/dist/layout.css" />
-            <link rel="stylesheet" href="https://unpkg.com/highlight.js@^11/styles/github-dark-dimmed.css" />
-            <script>
-              import { toggleTheme } from 'https://unpkg.com/bcomnes/mine.css@^4.0.0?module';
-              window.toggleTheme = toggleTheme
-            </script>
-            `
         : null}
     </head>
     <body class="safe-area-inset">
