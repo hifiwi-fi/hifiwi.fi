@@ -16,7 +16,7 @@
     "rimraf": "^3.0.2",
     "snazzy": "^9.0.0",
     "standard": "^16.0.0",
-    "uland-isomorphic": "^1.0.0",
+    "uland-isomorphic": "^2.0.0",
     "auto-changelog": "^2.0.0",
     "gh-release": "^6.0.0"
   },
