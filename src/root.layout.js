@@ -26,12 +26,14 @@ export default function rootLayout ({
         : null}
     </head>
     <body class="safe-area-inset">
-      <main class="mine-layout">
-        ${typeof children === 'string' ? html([children]) : children /* Support both uhtml and string children. Optional. */}
-      </main>      
-      <footer>
-        © HifiWifi LLC
-      </footer>
+      <div class="mine-layout">
+        <main>
+          ${typeof children === 'string' ? html([children]) : children /* Support both uhtml and string children. Optional. */}
+        </main>      
+        <footer>
+          © HifiWifi LLC
+        </footer>
+      </div>
     </body>
     </html>
 `)
