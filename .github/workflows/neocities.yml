@@ -7,7 +7,7 @@ on:
 
 env:
   node-version: lts/*
-  FORCE_COLOR: 2
+  FORCE_COLOR: 1
 
 concurrency: # prevent concurrent deploys doing strange things
   group: deploy-to-neocities
@@ -22,7 +22,7 @@ jobs:
     - name: Create LFS file list
       run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
     - name: Restore LFS cache
-      uses: actions/cache@v3.0.11
+      uses: actions/cache@v3
       id: lfs-cache
       with:
         path: .git/lfs
@@ -39,7 +39,7 @@ jobs:
         npm i
         npm run build
     - name: Deploy to neocities
-      uses: bcomnes/deploy-to-neocities@v1.1.10
+      uses: bcomnes/deploy-to-neocities@v1
       with:
         api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
         cleanup: true
