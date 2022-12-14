@@ -18,7 +18,7 @@
     "standard": "^17.0.0",
     "uland-isomorphic": "^2.0.0",
     "auto-changelog": "^2.0.0",
-    "gh-release": "^6.0.0"
+    "gh-release": "^7.0.0"
   },
   "dependencies": {
     "fragmentions": "^1.1.3",
