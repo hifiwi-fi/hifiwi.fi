@@ -23,7 +23,7 @@
   "dependencies": {
     "fragmentions": "^1.1.3",
     "highlight.js": "^11.5.0",
-    "mine.css": "^9.0.0"
+    "mine.css": "^9.0.1"
   },
   "homepage": "https://github.com/hifiwi-fi/hifiwi.fi",
   "keywords": [],
