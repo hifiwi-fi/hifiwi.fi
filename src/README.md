@@ -28,13 +28,3 @@ High-fidelity internet products. Welcome.
 ## Org chart
 
 - 🤦🏼‍♂️ [bret.io](https://bret.io)
-
-## Friends
-
-- 👬 [hypermodul.es](https://hypermodul.es)
-- 🛡 [Socket](https://socket.dev)
-- 📦 [css-pkg](https://css-pkg.github.io)
-- 📱 [Infinite Scroll](https://www.infinitescroll.org)
-- 🏝 [bits.coop](https://bits.coop)
-- 📈 [Hyper DeFi](https://discord.gg/SAhprXfY)
-- 🇩🇰 [Hypercore Protocol](https://hypercore-protocol.org)
