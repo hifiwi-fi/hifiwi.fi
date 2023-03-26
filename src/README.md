@@ -28,3 +28,7 @@ High-fidelity internet products. Welcome.
 ## Org chart
 
 - 🤦🏼‍♂️ [bret.io](https://bret.io)
+
+## Status Page
+
+- 🚦 [Service Status Page](https://stats.uptimerobot.com/1NW81u6yKG)
