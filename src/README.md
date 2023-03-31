@@ -31,4 +31,5 @@ High-fidelity internet products. Welcome.
 
 ## Status Page
 
-- 🚦 [Service Status Page](https://hifiwifi.betteruptime.com/)
+- 🚦 [Breadcrum Status](https://status.breadcrum.net)
+- 🚦 [Gumcast Status](https://status.gumcast.com)
