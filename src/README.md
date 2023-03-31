@@ -31,4 +31,4 @@ High-fidelity internet products. Welcome.
 
 ## Status Page
 
-- 🚦 [Service Status Page](https://stats.uptimerobot.com/1NW81u6yKG)
+- 🚦 [Service Status Page](https://hifiwifi.betteruptime.com/)
