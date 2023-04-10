@@ -13,7 +13,7 @@
     "browser-sync": "^2.26.7",
     "mkdirp": "^2.0.0",
     "npm-run-all2": "^6.0.2",
-    "rimraf": "^4.0.4",
+    "rimraf": "^5.0.0",
     "snazzy": "^9.0.0",
     "standard": "^17.0.0",
     "uland-isomorphic": "^2.0.0",
