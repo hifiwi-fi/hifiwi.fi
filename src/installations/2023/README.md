@@ -2,4 +2,5 @@
 
 🚧 [../Installation Directory](../)
 
-- [Residential: Network, Surveillance, Media](./04-18-residential/) 2023-04-18
+- 🏘️ [Farmhouse](./09-01-farmhouse/) - 2023-09-01
+- 🏡 [Residential](./04-18-residential/) - 2023-04-18
