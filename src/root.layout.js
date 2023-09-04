@@ -18,6 +18,11 @@ export default function rootLayout ({
       <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
       <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
       <link rel="icon" type="image/png" sizes="48x48" href="/favicons/favicon-48x48.png">
+
+      <link rel="alternate" title="bret.io (JSON Feed)" type="application/json" href="/feed.json" />
+      <link rel="alternate" title="bret.io (JSON Feed)" type="application/feed+json" href="/feed.json" />
+      <link rel="alternate" title="bret.io (RSS Feed)" type="application/rss+xml"  href="/feed.xml" />
+
       ${scripts
         ? scripts.map(script => html`<script type='module' src="${script}"></script>`)
         : null}
