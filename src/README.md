@@ -14,7 +14,8 @@ High-fidelity internet products. Welcome.
 
 ## Press Release
 
-- Coming soon...
+- 👋 [Introducing HifiWi.fi](./blog/2023/introducing-hifiwifi/) - Mon Sep 4 09:48:08 2023
+- 📚 [Full Blog](./blog/)
 
 ## Schematics
 
@@ -22,8 +23,8 @@ High-fidelity internet products. Welcome.
 
 ## Mail room
 
-- 🐦 [@hifiwi_fi](https://twitter.com/hifiwi_fi)
-- 👨‍💼 [Linked In](https://www.linkedin.com/company/hifiwi-fi/)
+- 🐦 Twitter: [@hifiwi_fi](https://twitter.com/hifiwi_fi)
+- 👨‍💼 LinkedIn: [@hifiwi-fi](https://www.linkedin.com/company/hifiwi-fi/)
 
 ## Org chart
 

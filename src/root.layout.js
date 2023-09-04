@@ -31,7 +31,7 @@ export default function rootLayout ({
           ${typeof children === 'string' ? html([children]) : children /* Support both uhtml and string children. Optional. */}
         </main>      
         <footer>
-          © HifiWifi LLC
+          © <a href="/">HifiWifi</a>
         </footer>
       </div>
     </body>
