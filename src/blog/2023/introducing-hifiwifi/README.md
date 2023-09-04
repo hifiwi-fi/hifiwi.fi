@@ -18,6 +18,8 @@ You can follow HifiWifi on the following channels:
 
 - 🌎 WWW: [hifiwi.fi](http://hifiwi.fi)
 - 📡 Feeds: [RSS](/feed.xml), [JSONFeed](/feed.json)
+- 🐈 GitHub: [@hifiwi-fi](https://github.com/hifiwi-fi/)
+- 😸 Neocities: [@hifiwifi](https://neocities.org/site/hifiwifi)
 - 🐦 Twitter: [@hifiwi_fi](https://twitter.com/hifiwi_fi)
 - 👨‍💼 LinkedIn: [@hifiwi-fi](https://www.linkedin.com/company/hifiwi-fi/)
 - 🐘 Mastodon: [@hifiwifi@fosstodon.org](https://fosstodon.org/@hifiwifi)

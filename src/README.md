@@ -29,14 +29,12 @@ HifiWifi networking services are currently operating in Arcata, CA and serving w
 
 📚 [Blog Index](./blog/)
 
-## Schematics
-
-- 🐈 [github.com/hifiwi-fi](https://github.com/hifiwi-fi/)
-
 ## Mail room
 
 - 📧 Email: [hi@hifiwi.fi](mailto:hi@hifiwi.fi)
 - 💬 Libera IRC: [#hifiwifi](ircs://irc.libera.chat/hifiwifi)
+- 🐈 GitHub: [@hifiwi-fi](https://github.com/hifiwi-fi/)
+- 😸 Neocities: [@hifiwifi](https://neocities.org/site/hifiwifi)
 - 🐘 Mastodon: [@hifiwifi](https://fosstodon.org/@hifiwifi)
 - 🌦️ BlueSky: [@hifiwi.fi](https://bsky.app/profile/hifiwi.fi)
 - 🐦 Twitter: [@hifiwi_fi](https://twitter.com/hifiwi_fi)
