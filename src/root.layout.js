@@ -37,6 +37,8 @@ export default function rootLayout ({
         </main>      
         <footer>
           © <a href="/">HifiWifi</a>
+          <a href="/feed.json"><img class="rounded-icon" height="14" width="14" src="/media/jsonfeed.svg"></a>
+          <a href="/feed.xml"><img height="14" width="14" src="/media/rss.svg" ></a>
         </footer>
       </div>
     </body>
