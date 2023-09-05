@@ -31,14 +31,16 @@ HifiWifi networking services are currently operating in Arcata, CA and serving w
 
 ## Mail room
 
-- 📧 Email: [hi@hifiwi.fi](mailto:hi@hifiwi.fi)
-- 💬 Libera IRC: [#hifiwifi](ircs://irc.libera.chat/hifiwifi)
-- 🐈 GitHub: [@hifiwi-fi](https://github.com/hifiwi-fi/)
-- 😸 Neocities: [@hifiwifi](https://neocities.org/site/hifiwifi)
-- 🐘 Mastodon: [@hifiwifi](https://fosstodon.org/@hifiwifi)
-- 🌦️ BlueSky: [@hifiwi.fi](https://bsky.app/profile/hifiwi.fi)
-- 🐦 Twitter: [@hifiwi_fi](https://twitter.com/hifiwi_fi)
-- 👨‍💼 LinkedIn: [@hifiwi-fi](https://www.linkedin.com/company/hifiwi-fi/)
+<ul>
+  <li>📧 Email: <a rel="me" href="mailto:hi@hifiwi.fi">hi@hifiwi.fi</a></li>
+  <li>💬 Libera IRC: <a href="ircs://irc.libera.chat/hifiwifi">#hifiwifi</a></li>
+  <li>🐈 GitHub: <a rel="me" href="https://github.com/hifiwi-fi/">@hifiwi-fi</a></li>
+  <li>😸 Neocities: <a rel="me" href="https://neocities.org/site/hifiwifi">@hifiwifi</a></li>
+  <li>🐘 Mastodon: <a rel="me" href="https://fosstodon.org/@hifiwifi">@hifiwifi</a></li>
+  <li>🌦️ BlueSky: <a rel="me" href="https://bsky.app/profile/hifiwi.fi">@hifiwi.fi</a></li>
+  <li>🐦 Twitter: <a rel="me" href="https://twitter.com/hifiwi_fi">@hifiwi_fi</a></li>
+  <li>👨‍💼 LinkedIn: <a rel="me" href="https://www.linkedin.com/company/hifiwi-fi/">@hifiwi-fi</a></li>
+</ul>
 
 ## Org chart
 
