@@ -1,4 +1,8 @@
-# Introducing 🛰️ HifiWi.fi
+---
+layout: article
+title: "Introducing 🛰️ HifiWi.fi"
+publishDate: "2023-09-04T16:48:08.000Z"
+---
 
 Welcome to HifiWi.fi: *high fidelity internet products*.
 
@@ -29,12 +33,4 @@ You can follow HifiWifi on the following channels:
 For project inquiries or questions, please direct all questions to the HifiWifi mail room:
 
 - 📧 [hi@hifiwi.fi](mailto:hi@hifiwi.fi)
-
-<p>
-  Published: <a href="/blog/2023/introducing-hifiwifi/">
-    <time datetime="2023-09-04T16:48:08.000Z">
-      Mon Sep 4 09:48:08 2023
-    </time>
-  </a>
-</p>
 

@@ -12,22 +12,9 @@ High-fidelity internet products. Welcome.
 - 🥖 [breadcrum.net](https://breadcrum.net) — internet newspaper clippings
 - 📡 [gumcast](https://gumcast.com) — gumroad subscription courier
 
-## Installations
+## [Blog](./blog/)
 
-- 🏘️ [Farmhouse](./installations/2023/09-01-farmhouse/) - 2023-09-01
-- 🏡 [Residential](./installations/2023/04-18-residential/) - 2023-04-18
-
-Planning your next residential or commercial network?
-Please send us your project proposals, ideas and inquiries.
-HifiWifi networking services are currently operating in Arcata, CA and serving wider Humboldt County.
-
-🚧 [Installation Directory](./installations/)
-
-## Press Release
-
-- 👋 [Introducing HifiWi.fi](./blog/2023/introducing-hifiwifi/) - 2023-09-04
-
-📚 [Blog Index](./blog/)
+{{{ vars.blogPostsHtml }}}
 
 ## Mail room
 
