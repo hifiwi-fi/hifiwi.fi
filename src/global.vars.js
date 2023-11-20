@@ -6,6 +6,7 @@ export default () => {
     authorName: 'HifiWifi',
     authorUrl: 'https://hifiwi.fi',
     authorImgUrl: '/media/logo.jpeg',
-    authorImgAlt: 'HifiWifi Logo'
+    authorImgAlt: 'HifiWifi Logo',
+    mastodonUrl: 'https://fosstodon.org/@hifiwifi'
   }
 }

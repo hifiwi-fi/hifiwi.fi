@@ -9,6 +9,7 @@ import { html, render } from 'uland-isomorphic'
  * @typedef {{
  *  title: string,
  *  siteName: string,
+ *  mastodonUrl: string
  * }} RootLayoutVars
  */
 
@@ -16,7 +17,8 @@ import { html, render } from 'uland-isomorphic'
 export default function rootLayout ({
   vars: {
     title,
-    siteName
+    siteName,
+    mastodonUrl
   },
   scripts,
   styles,
@@ -66,6 +68,7 @@ export default function rootLayout ({
           © <a href="/">HifiWifi</a>
           <a href="/feed.json"><img class="rounded-icon" height="14" width="14" src="/media/jsonfeed.svg"></a>
           <a href="/feed.xml"><img height="14" width="14" src="/media/rss.svg" ></a>
+          <a href="${mastodonUrl}" rel="me"><img height="14" width="14" src="/media/mastodon.svg"></a>
         </footer>
       </div>
     </body>
