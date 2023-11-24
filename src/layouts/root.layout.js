@@ -2,7 +2,7 @@ import { html, render } from 'uland-isomorphic'
 
 /**
  * @template T
- * @typedef {import('@siteup/cli').LayoutFunction<T>} LayoutFunction
+ * @typedef {import('top-bun').LayoutFunction<T>} LayoutFunction
  */
 
 /**

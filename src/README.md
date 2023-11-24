@@ -35,5 +35,5 @@ High-fidelity internet products. Welcome.
 
 ## Status Page
 
-- 🚦 [Breadcrum Status](https://status.breadcrum.net)
-- 🚦 [Gumcast Status](https://status.gumcast.com)
+- 🚦 [Breadcrum Status](https://breadcrum.betteruptime.com)
+- 🚦 [Gumcast Status](https://gumcast.betteruptime.com)
