@@ -39,7 +39,9 @@ jobs:
         npm i
         npm run build
     - name: Deploy to neocities
-      uses: bcomnes/deploy-to-neocities@v1
+      uses: bcomnes/deploy-to-neocities@v3
       with:
-        api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
+        api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
         cleanup: true
+        preview_before_deploy: true
+        neocoties_supporter: true
