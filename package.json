@@ -18,7 +18,7 @@
     "npm-run-all2": "^7.0.1",
     "snazzy": "^9.0.0",
     "standard": "^17.0.0",
-    "top-bun": "^7.0.0",
+    "top-bun": "^10.1.1",
     "typescript": "~5.3.2",
     "uland-isomorphic": "^2.0.0"
   },
