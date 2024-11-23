@@ -15,7 +15,7 @@
     "gh-release": "^7.0.0",
     "jsonfeed-to-atom": "^1.2.4",
     "npm-run-all2": "^6.0.2",
-    "p-map": "^6.0.0",
+    "p-map": "^7.0.2",
     "snazzy": "^9.0.0",
     "standard": "^17.0.0",
     "top-bun": "^7.0.0",
