@@ -14,7 +14,7 @@
     "classnames": "^2.3.2",
     "gh-release": "^7.0.0",
     "jsonfeed-to-atom": "^1.2.4",
-    "npm-run-all2": "^6.0.2",
+    "npm-run-all2": "^7.0.1",
     "p-map": "^6.0.0",
     "snazzy": "^9.0.0",
     "standard": "^17.0.0",
