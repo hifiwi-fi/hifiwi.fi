@@ -44,4 +44,4 @@ jobs:
         api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
         cleanup: true
         preview_before_deploy: true
-        neocoties_supporter: true
+        neocities_supporter: true
