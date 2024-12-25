@@ -20,6 +20,7 @@ High-fidelity internet products. Welcome.
 
 <ul>
   <li>📧 Email: <a rel="me" href="mailto:hi@hifiwi.fi">hi@hifiwi.fi</a></li>
+  <li>💬 Discord Chat: <a href="{{ vars.discordUrl }}">#hifiwifi</a></li>
   <li>💬 Libera IRC: <a href="ircs://irc.libera.chat/hifiwifi">#hifiwifi</a></li>
   <li>🐈 GitHub: <a rel="me" href="https://github.com/hifiwi-fi/">@hifiwi-fi</a></li>
   <li>😸 Neocities: <a rel="me" href="https://neocities.org/site/hifiwifi">@hifiwifi</a></li>

@@ -7,6 +7,7 @@ export default () => {
     authorUrl: 'https://hifiwi.fi',
     authorImgUrl: '/media/logo.jpeg',
     authorImgAlt: 'HifiWifi Logo',
-    mastodonUrl: 'https://fosstodon.org/@hifiwifi'
+    mastodonUrl: 'https://fosstodon.org/@hifiwifi',
+    discordUrl: 'https://discord.gg/5nbyBqkduf'
   }
 }
