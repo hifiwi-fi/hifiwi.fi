@@ -54,6 +54,8 @@ export default function rootLayout ({
       <link rel="alternate" title="HifiWi.fi (JSON Feed)" type="application/feed+json" href="/feed.json" />
       <link rel="alternate" title="HifiWi.fi (RSS Feed)" type="application/rss+xml"  href="/feed.xml" />
 
+      <script src="https://analytics.ahrefs.com/analytics.js" data-key="8SrDqMh24myrZxyWCWHBOg" async></script>
+
       ${scripts
         ? scripts.map(script => html`<script type='module' src="${script}"></script>`)
         : null}
@@ -65,7 +67,7 @@ export default function rootLayout ({
       <div class="mine-layout">
         <main>
           ${typeof children === 'string' ? html([children]) : children /* Support both uhtml and string children. Optional. */}
-        </main>      
+        </main>
         <footer>
           © <a href="/">HifiWifi</a>
           <a href="/feed.json"><img class="rounded-icon" height="14" width="14" src="/media/jsonfeed.svg"></a>
