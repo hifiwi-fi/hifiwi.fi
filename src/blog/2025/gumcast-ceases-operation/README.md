@@ -2,7 +2,7 @@
 layout: article
 title: "Gumcast ceases operation"
 serif: false
-publishDate: "2025-07-05T20:25:50.867Z"
+publishDate: "2025-07-05T20:41:47.727Z"
 handlebars: false
 ---
 
