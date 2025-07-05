@@ -10,7 +10,6 @@ High-fidelity internet products. Welcome.
 ## Products
 
 - 🥖 [breadcrum.net](https://breadcrum.net) — internet newspaper clippings
-- 📡 [gumcast](https://gumcast.com) — gumroad subscription courier
 
 ## [Blog](./blog/)
 
@@ -30,11 +29,11 @@ High-fidelity internet products. Welcome.
   <li>👨‍💼 LinkedIn: <a rel="me" href="https://www.linkedin.com/company/hifiwi-fi/">@hifiwi-fi</a></li>
 </ul>
 
-## Org chart
+## People
 
 - 🤦🏼‍♂️ [bret.io](https://bret.io)
+
 
 ## Status Page
 
 - 🚦 [Breadcrum Status](https://breadcrum.betteruptime.com)
-- 🚦 [Gumcast Status](https://gumcast.betteruptime.com)

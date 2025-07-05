@@ -41,14 +41,16 @@
     "build": "npm run clean && run-p build:*",
     "build:top-bun": "tb",
     "watch": "npm run clean && run-p watch:*",
-    "watch:top-bun": "npm run build:top-bun -- --watch",
+    "watch:top-bun": "npm run build:top-bun -- --watch --drafts",
     "generate-icon": "npx gravatar-favicons --config favicon-config.js",
     "clean": "rm -rf public && mkdir -p public",
     "start": "npm run watch",
     "release": "git push --follow-tags && gh-release -y",
     "version": "run-s version:*",
     "version:changelog": "auto-changelog -p --template keepachangelog auto-changelog --breaking-pattern 'BREAKING CHANGE:'",
-    "version:git": "git add CHANGELOG.md"
+    "version:git": "git add CHANGELOG.md",
+    "new-blogpost": "node scripts/create-blogpost.js --title",
+    "publish-draft": "node scripts/publish-draft.js"
   },
   "funding": {
     "type": "individual",
