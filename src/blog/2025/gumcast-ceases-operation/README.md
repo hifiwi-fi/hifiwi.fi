@@ -10,4 +10,4 @@ Gumcast ceases any furthur operation. Please read more on the Gumcast blog:
 
 - [Gumcast.com Blog: Gumcast is shutting down](https://gumcast.com/blog/2025/gumcast-is-shutting-down/)
 
-Thank you for everyone who helped on the project and I help it provided value to people.
+Thank you to everyone who helped on the project. I sincerly hope it provided value to everyone who tried and used it. 
