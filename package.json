@@ -18,7 +18,7 @@
     "npm-run-all2": "^8.0.1",
     "neostandard": "^0.12.0",
     "top-bun": "^10.1.1",
-    "typescript": "~5.8.2",
+    "typescript": "~5.9.2",
     "uland-isomorphic": "^2.0.0"
   },
   "dependencies": {
