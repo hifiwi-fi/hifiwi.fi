@@ -1,6 +1,6 @@
 import { html, render } from 'uland-isomorphic'
 
-export async function postVars ({
+export default async function globalData ({
   pages
 }) {
   const blogPosts = pages
@@ -25,9 +25,7 @@ export async function postVars ({
         })}
     </ul>`)
 
-  const pageVars = {
+  return {
     blogPostsHtml: blogpostsHtml
   }
-
-  return pageVars
 }

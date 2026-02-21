@@ -2,7 +2,7 @@ import { html } from 'uland-isomorphic'
 import { dirname, basename } from 'node:path'
 
 /**
- * @import {PageFunction} from 'top-bun'
+ * @import {PageFunction} from '@domstack/static'
  */
 
 export const vars = {

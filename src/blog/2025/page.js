@@ -1,5 +1,5 @@
 /**
- * @import {PageFunction} from 'top-bun'
+ * @import {PageFunction} from '@domstack/static'
  */
 
 export const vars = {
