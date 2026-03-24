@@ -18,7 +18,7 @@
     "npm-run-all2": "^8.0.1",
     "neostandard": "^0.13.0",
     "@domstack/static": "^11.0.0",
-    "typescript": "~5.8.2",
+    "typescript": "~6.0.2",
     "uland-isomorphic": "^2.0.0"
   },
   "dependencies": {
