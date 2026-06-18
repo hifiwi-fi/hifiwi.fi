@@ -12,7 +12,7 @@
     "@voxpelli/tsconfig": "^15.0.0",
     "auto-changelog": "^2.0.0",
     "classnames": "^2.3.2",
-    "gh-release": "^7.0.0",
+    "gh-release": "^8.1.0",
     "jsonfeed-to-atom": "^1.2.4",
     "p-map": "^7.0.2",
     "npm-run-all2": "^9.0.0",
