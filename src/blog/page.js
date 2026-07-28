@@ -1,8 +1,9 @@
-import { html } from 'uland-isomorphic'
+import { html } from 'fragtml'
 import { dirname, basename } from 'node:path'
 
 /**
- * @import {PageFunction} from '@domstack/static'
+ * @import { PageFunction } from '@domstack/static'
+ * @import { HtmlResult } from 'fragtml/types.js'
  */
 
 export const vars = {
@@ -22,16 +23,15 @@ export const vars = {
  *  layout: string,
  *  publishDate: string
  *  title: string
- * }>}
+ * }, HtmlResult>}
  */
-export default async function blogIndex2023 ({
+export default function blogIndex2023 ({
   pages,
   page
 }) {
   const blogPosts = pages
     .filter(page => page.vars.layout === 'article')
-    // @ts-ignore
-    .sort((a, b) => new Date(b.vars.publishDate) - new Date(a.vars.publishDate))
+    .sort((a, b) => new Date(b.vars.publishDate).getTime() - new Date(a.vars.publishDate).getTime())
     .slice(0, 50)
 
   const folderPages = pages.filter(folderPage => {

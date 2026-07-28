@@ -1,14 +1,31 @@
-import { html } from 'uland-isomorphic'
+/**
+ * @import { LayoutFunction } from '@domstack/static'
+ * @import { HtmlResult } from 'fragtml/types.js'
+ * @import { RootLayoutVars } from './root.layout.js'
+ */
+import { html, raw, render } from 'fragtml'
 import { sep } from 'node:path'
 import { breadcrumb } from '../components/breadcrumb/index.js'
 
 import defaultRootLayout from './root.layout.js'
 
+/**
+ * @typedef {RootLayoutVars & {
+ *  authorImgUrl?: string,
+ *  authorImgAlt?: string,
+ *  authorName?: string,
+ *  authorUrl?: string,
+ *  publishDate?: string,
+ *  updatedDate?: string
+ * }} ArticleVars
+ */
+
+/** @type {LayoutFunction<ArticleVars, string | HtmlResult, string>} */
 export default function articleLayout (args) {
   const { children, ...rest } = args
   const vars = args.vars
   const pathSegments = args.page.path.split(sep)
-  const wrappedChildren = html`
+  const wrappedChildren = render(html`
     ${breadcrumb({ pathSegments })}
     <article class="article-layout h-entry" itemscope itemtype="http://schema.org/NewsArticle">
       <header class="article-header">
@@ -45,8 +62,8 @@ export default function articleLayout (args) {
 
       <section class="e-content" itemprop="articleBody">
         ${typeof children === 'string'
-          ? html([children])
-          : children /* Support both uhtml and string children. Optional. */
+          ? raw(children)
+          : children
         }
       </section>
 
@@ -57,7 +74,7 @@ export default function articleLayout (args) {
       -->
     </article>
     ${breadcrumb({ pathSegments })}
-  `
+  `)
 
   return defaultRootLayout({ children: wrappedChildren, ...rest })
 }

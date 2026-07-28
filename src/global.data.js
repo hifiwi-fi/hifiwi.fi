@@ -1,14 +1,16 @@
-import { html, render } from 'uland-isomorphic'
+/** @import { GlobalDataFunction } from '@domstack/static' */
+import { html, render } from 'fragtml'
 
-export default async function globalData ({
+/** @type {GlobalDataFunction<{ blogPostsHtml: string }>} */
+export default function globalData ({
   pages
 }) {
   const blogPosts = pages
     .filter(page => page.vars.layout === 'article')
-    .sort((a, b) => new Date(b.vars.publishDate) - new Date(a.vars.publishDate))
+    .sort((a, b) => new Date(b.vars.publishDate).getTime() - new Date(a.vars.publishDate).getTime())
     .slice(0, 5)
 
-  const blogpostsHtml = render(String, html`<ul class="blog-index-list">
+  const blogpostsHtml = render(html`<ul class="blog-index-list">
       ${blogPosts.map(p => {
         const publishDate = p.vars.publishDate ? new Date(p.vars.publishDate) : null
         return html`

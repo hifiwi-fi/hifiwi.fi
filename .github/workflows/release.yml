@@ -1,17 +1,29 @@
-name: npm bump
+name: Version and Release
 
 on:
   workflow_dispatch:
     inputs:
-      newversion:
-        description: 'npm version {major,minor,patch}'
+      version-type:
+        description: Version type
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+          - custom
+        default: patch
         required: true
+      new-version:
+        description: Custom version (only used when version type is custom)
+        required: false
 
 env:
-  node_version: 'lts/*'
-  FORCE_COLOR: 1
+  FORCE_COLOR: 3
 
-concurrency: # prevent concurrent deploys doing strange things
+permissions:
+  contents: write
+
+concurrency:
   group: hifiwifi-release
   cancel-in-progress: true
 
@@ -19,24 +31,22 @@ jobs:
   version_and_release:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v7
-      with:
-        # fetch full history so things like auto-changelog work properly
-        fetch-depth: 0
-    - name: Use Node.js ${{ env.node_version }}
-      uses: actions/setup-node@v7
-      with:
-        node-version: ${{ env.node_version }}
-        # setting a registry enables the NODE_AUTH_TOKEN env variable where we can set an npm token.  REQUIRED
-        registry-url: 'https://registry.npmjs.org'
-    - run: npm i
-    - run: npm test
-    - run: git reset --hard && git clean -fd
-    - name: npm version && npm test
-      uses: bcomnes/npm-bump@v3
-      with:
-        git_email: bcomnes@gmail.com
-        git_username: ${{ github.actor }}
-        newversion: ${{ github.event.inputs.newversion }}
-        github_token: ${{ secrets.GITHUB_TOKEN }} # built in actions token.  Passed tp gh-release if in use.
-        publish_cmd: npm run release
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Use Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: package.json
+      - run: npm install
+      - run: npm test
+      - name: Version and release
+        id: npm-bump
+        uses: bcomnes/npm-bump@v3.0.2
+        with:
+          git-email: bcomnes@gmail.com
+          git-username: ${{ github.actor }}
+          version-type: ${{ github.event.inputs['version-type'] }}
+          new-version: ${{ github.event.inputs['new-version'] }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          publish-cmd: npm run release

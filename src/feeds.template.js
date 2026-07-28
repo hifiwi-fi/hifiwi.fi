@@ -1,10 +1,7 @@
 import pMap from 'p-map'
 import jsonfeedToAtom from 'jsonfeed-to-atom'
 
-/**
- * @template T
- * @typedef {import('@domstack/static').TemplateAsyncIterator<T>} TemplateAsyncIterator
- */
+/** @import { TemplateAsyncIterator } from '@domstack/static' */
 
 /** @type {TemplateAsyncIterator<{
  *  siteName: string,
@@ -30,7 +27,7 @@ export default async function * feedsTemplate ({
 }) {
   const blogPosts = pages
     .filter(page => page.vars.layout === 'article')
-    .sort((a, b) => new Date(b.vars.publishDate) - new Date(a.vars.publishDate))
+    .sort((a, b) => new Date(b.vars.publishDate).getTime() - new Date(a.vars.publishDate).getTime())
     .slice(0, 10)
 
   const jsonFeed = {
