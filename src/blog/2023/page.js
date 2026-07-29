@@ -12,8 +12,8 @@ export const vars = {
  * @type {PageFunction<{
  *       title: string
  *       publishDate: string
- * }>}
+ * }, string>}
  */
-export default async function blogIndex2023 () {
+export default function blogIndex2023 () {
   return ''
 }

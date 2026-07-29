@@ -1,14 +1,10 @@
-import { html } from 'uland-isomorphic'
+/**
+ * @import { LayoutFunction } from '@domstack/static'
+ * @import { HtmlResult } from 'fragtml/types.js'
+ * @import { BlogIndexVars } from './blog-index.layout.js'
+ */
+import { html, raw, render } from 'fragtml'
 import { dirname } from 'node:path'
-
-/**
- * @template T
- * @typedef {import('@domstack/static').LayoutFunction<T>} LayoutFunction
- */
-
-/**
- * @typedef {import('./blog-index.layout.js').BlogIndexVars} BlogIndexVars
- */
 
 /**
  * @typedef {BlogIndexVars} AutoBlogIndexVars
@@ -16,7 +12,7 @@ import { dirname } from 'node:path'
 
 import blogIndexLayout from './blog-index.layout.js'
 
-/** @type {LayoutFunction<AutoBlogIndexVars>} */
+/** @type {LayoutFunction<AutoBlogIndexVars, string | HtmlResult, string>} */
 export default function blogAutoIndexLayout (args) {
   const { children, ...rest } = args
 
@@ -26,7 +22,7 @@ export default function blogAutoIndexLayout (args) {
     return dir === path
   })
 
-  const wrappedChildren = html`
+  const wrappedChildren = render(html`
     <ul class="blog-index-list">
       ${folderPages.map(p => {
         const publishDate = p.vars.publishDate ? new Date(p.vars.publishDate) : null
@@ -44,10 +40,10 @@ export default function blogAutoIndexLayout (args) {
         })}
     </ul>
     ${typeof children === 'string'
-      ? html([children])
-      : children /* Support both uhtml and string children. Optional. */
+      ? raw(children)
+      : children
     }
-  `
+  `)
 
   return blogIndexLayout({ children: wrappedChildren, ...rest })
 }
