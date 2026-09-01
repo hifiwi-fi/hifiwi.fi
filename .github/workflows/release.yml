@@ -42,7 +42,7 @@ jobs:
       - run: npm test
       - name: Version and release
         id: npm-bump
-        uses: bcomnes/npm-bump@v3.0.2
+        uses: bcomnes/npm-bump@v3.0.4
         with:
           git-email: bcomnes@gmail.com
           git-username: ${{ github.actor }}
