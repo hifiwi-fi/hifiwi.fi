@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@domstack/static": "^11.0.3",
-    "@voxpelli/tsconfig": "^16.2.1",
+    "@voxpelli/tsconfig": "^17.0.0",
     "classnames": "^2.3.2",
     "fragtml": "^0.0.9",
     "jsonfeed-to-atom": "^1.2.4",
@@ -22,7 +22,7 @@
     "npm-run-all2": "^9.0.0",
     "p-map": "^7.0.2",
     "releasearoni": "^0.2.0",
-    "typescript": "~6.0.3"
+    "typescript": "~7.0.2"
   },
   "dependencies": {
     "highlight.js": "^11.5.0",
