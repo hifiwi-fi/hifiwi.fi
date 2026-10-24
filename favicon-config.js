@@ -1,5 +1,5 @@
 export default {
-  email: 'bret@hifiwi.fi',
+  source: './src/media/hifiwifi-logo-blue-ink-alpha.png',
   dest: './src/favicons/',
   faviconConfig: {
     path: '/favicons/', // Path for overriding default icons path. `string`
@@ -9,8 +9,8 @@ export default {
     developerURL: 'https://hifiwi.fi', // Your (or your developer's) URL. `string`
     dir: 'auto', // Primary text direction for name, short_name, and description
     lang: 'en-US', // Primary language for name and short_name
-    background: '#232830', // Background colour for flattened icons. `string`
-    theme_color: '#232830', // Theme color user for example in Android's task switcher. `string`
+    background: '#f3e6c9', // Background colour for flattened icons. `string`
+    theme_color: '#f3e6c9', // Theme color user for example in Android's task switcher. `string`
     display: 'standalone', // Preferred display mode: "fullscreen", "standalone", "minimal-ui" or "browser". `string`
     orientation: 'any', // Default orientation: "any", "natural", "portrait" or "landscape". `string`
     start_url: '/?homescreen=1', // Start URL when launching the application from a device. `string`
@@ -25,7 +25,7 @@ export default {
       //   * color - set background for the specified icons
       //
       android: false, // Create Android homescreen icon. `boolean` or `{ offset, background }`
-      appleIcon: true, // Create Apple touch icons. `boolean` or `{ offset, background }`
+      appleIcon: { background: '#f3e6c9' }, // Create Apple touch icons. `boolean` or `{ offset, background }`
       appleStartup: false, // Create Apple startup images. `boolean` or `{ offset, background }`
       coast: false, // Create Opera Coast icon. `boolean` or `{ offset, background }`
       favicons: true, // Create regular favicons. `boolean`

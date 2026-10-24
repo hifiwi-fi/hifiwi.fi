@@ -1,6 +1,11 @@
+/**
+ * @import { DataDeps, TemplateFunction } from '@domstack/static/types.js'
+ * @import { SitemapData } from './global.data.js'
+ */
 import builder from 'xmlbuilder'
 
-/** @import { TemplateFunction } from '@domstack/static' */
+/** @satisfies {DataDeps<SitemapData>} */
+export const dataDeps = ['sitemapPaths']
 
 /** @type {TemplateFunction<{
  *  siteName: string,
@@ -13,18 +18,18 @@ import builder from 'xmlbuilder'
  *  publishDate: string
  *  title: string,
  *  noindex?: boolean
- * }>} */
-export default async ({
+ * }, SitemapData>} */
+export default ({
   vars: {
     siteUrl
   },
-  pages
+  data
 }) => {
   const sitemapObj = {
     urlset: {
       '@xmlns': 'http://www.sitemaps.org/schemas/sitemap/0.9',
-      url: pages.filter(page => !page.vars.noindex).map(page => ({
-        loc: `${siteUrl}/${page.pageInfo.path}${page.pageInfo.path && !page.pageInfo.path.endsWith('.html') ? '/' : ''}`
+      url: data.sitemapPaths.map(path => ({
+        loc: `${siteUrl}/${path}${path && !path.endsWith('.html') ? '/' : ''}`
       }))
     }
   }

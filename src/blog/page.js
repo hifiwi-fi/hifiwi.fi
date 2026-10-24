@@ -1,15 +1,16 @@
-import { html } from 'fragtml'
-import { dirname, basename } from 'node:path'
-
 /**
- * @import { PageFunction } from '@domstack/static'
+ * @import { DataDeps, PageFunction } from '@domstack/static/types.js'
+ * @import { BlogIndexData } from '../global.data.js'
  * @import { HtmlResult } from 'fragtml/types.js'
  */
+import { html } from 'fragtml'
+import { basename } from 'node:path'
 
 export const vars = {
   title: 'Recent Blog Posts',
   layout: 'blog-index',
-  noindex: true
+  noindex: true,
+  dataDeps: /** @satisfies {DataDeps<BlogIndexData>} */ (['recentBlogPosts', 'blogArchives'])
 }
 
 /**
@@ -23,30 +24,21 @@ export const vars = {
  *  layout: string,
  *  publishDate: string
  *  title: string
- * }, HtmlResult>}
+ * }, HtmlResult, BlogIndexData>}
  */
 export default function blogIndex2023 ({
-  pages,
-  page
+  data
 }) {
-  const blogPosts = pages
-    .filter(page => page.vars.layout === 'article')
-    .sort((a, b) => new Date(b.vars.publishDate).getTime() - new Date(a.vars.publishDate).getTime())
-    .slice(0, 50)
-
-  const folderPages = pages.filter(folderPage => {
-    const dir = dirname(folderPage.pageInfo.path)
-    const path = page.path
-    return dir === path
-  })
+  const blogPosts = data.recentBlogPosts
+  const folderPages = data.blogArchives
 
   return html`
     <ul class="blog-index-list">
       ${blogPosts.map(p => {
-        const publishDate = p.vars.publishDate ? new Date(p.vars.publishDate) : null
+        const publishDate = p.publishDate ? new Date(p.publishDate) : null
         return html`
           <li class="blog-entry h-entry">
-            <a class="blog-entry-link u-url u-uid p-name" href="/${p.pageInfo.path}/">${p.vars.title}</a>
+            <a class="blog-entry-link u-url u-uid p-name" href="/${p.path}/">${p.title}</a>
             ${
               publishDate
                 ? html`<time class="blog-entry-date dt-published" datetime="${publishDate.toISOString()}">
@@ -62,7 +54,7 @@ export default function blogIndex2023 ({
       <ul class="archive-list">
         ${folderPages.map(p => {
           return html`<li>
-            <a href="/${p.pageInfo.path}/">${basename(p.pageInfo.path)}</a>
+            <a href="/${p.path}/">${basename(p.path)}</a>
           </li>`
         })}
       <ul>

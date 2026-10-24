@@ -1,11 +1,15 @@
 ---
 title: ''
+dataDeps: [blogPostsHtml]
 ---
-# HifiWi.fi
+<h1 class="site-title">
+  <picture class="site-logo" style="--logo-mask: url('/media/hifiwifi-logo-white-ink-alpha.png')">
+    <source media="screen and (prefers-color-scheme: dark)" srcset="/media/hifiwifi-logo-white-ink-alpha.png">
+    <img height="280" width="280" src="/media/hifiwifi-logo-blue-ink-alpha.png" alt="HifiWi.fi">
+  </picture>
+</h1>
 
-High-fidelity internet products. Welcome.
-
-<img height='200' width='200' src='./media/logo.jpeg' alt='logo'>
+<p class="site-subtitle">High-fidelity internet products. Welcome.</p>
 
 ## Products
 
@@ -13,7 +17,7 @@ High-fidelity internet products. Welcome.
 
 ## [Blog](./blog/)
 
-{{{ vars.blogPostsHtml }}}
+{{{ data.blogPostsHtml }}}
 
 ## Mail room
 

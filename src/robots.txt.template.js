@@ -1,4 +1,4 @@
-/** @import { TemplateFunction } from '@domstack/static' */
+/** @import { TemplateFunction } from '@domstack/static/types.js' */
 
 /** @type {TemplateFunction<{
  *  siteName: string,
@@ -11,7 +11,7 @@
  *  publishDate: string
  *  title: string
  * }>} */
-export default async ({
+export default ({
   vars: {
     siteUrl
   }

@@ -1,7 +1,11 @@
-import pMap from 'p-map'
+/**
+ * @import { DataDeps, TemplateAsyncIterator } from '@domstack/static/types.js'
+ * @import { FeedData } from './global.data.js'
+ */
 import jsonfeedToAtom from 'jsonfeed-to-atom'
 
-/** @import { TemplateAsyncIterator } from '@domstack/static' */
+/** @satisfies {DataDeps<FeedData>} */
+export const dataDeps = ['feedItems']
 
 /** @type {TemplateAsyncIterator<{
  *  siteName: string,
@@ -13,7 +17,7 @@ import jsonfeedToAtom from 'jsonfeed-to-atom'
  *  layout: string,
  *  publishDate: string
  *  title: string
- * }>} */
+ * }, FeedData>} */
 export default async function * feedsTemplate ({
   vars: {
     siteName,
@@ -23,13 +27,8 @@ export default async function * feedsTemplate ({
     authorUrl,
     authorImgUrl
   },
-  pages
+  data
 }) {
-  const blogPosts = pages
-    .filter(page => page.vars.layout === 'article')
-    .sort((a, b) => new Date(b.vars.publishDate).getTime() - new Date(a.vars.publishDate).getTime())
-    .slice(0, 10)
-
   const jsonFeed = {
     version: 'https://jsonfeed.org/version/1',
     title: siteName,
@@ -41,15 +40,7 @@ export default async function * feedsTemplate ({
       url: authorUrl,
       avatar: authorImgUrl
     },
-    items: await pMap(blogPosts, async (page) => {
-      return {
-        date_published: page.vars.publishDate,
-        title: page.vars.title,
-        url: `${siteUrl}/${page.pageInfo.path}/`,
-        id: `${siteUrl}/${page.pageInfo.path}/#${page.vars.publishDate}`,
-        content_html: await page.renderInnerPage({ pages })
-      }
-    }, { concurrency: 4 })
+    items: data.feedItems
   }
 
   yield {

@@ -1,5 +1,5 @@
 /**
- * @import { LayoutFunction } from '@domstack/static'
+ * @import { LayoutFunction } from '@domstack/static/types.js'
  * @import { HtmlResult } from 'fragtml/types.js'
  * @import { RootLayoutVars } from './root.layout.js'
  */
@@ -7,11 +7,12 @@ import { html, raw, render } from 'fragtml'
 import { sep } from 'node:path'
 import { breadcrumb } from '../components/breadcrumb/index.js'
 
-import defaultRootLayout from './root.layout.js'
+export const parentLayout = 'root'
 
 /**
  * @typedef {RootLayoutVars & {
  *  authorImgUrl?: string,
+ *  authorImgDarkUrl?: string,
  *  authorImgAlt?: string,
  *  authorName?: string,
  *  authorUrl?: string,
@@ -22,10 +23,10 @@ import defaultRootLayout from './root.layout.js'
 
 /** @type {LayoutFunction<ArticleVars, string | HtmlResult, string>} */
 export default function articleLayout (args) {
-  const { children, ...rest } = args
+  const { children } = args
   const vars = args.vars
   const pathSegments = args.page.path.split(sep)
-  const wrappedChildren = render(html`
+  return render(html`
     ${breadcrumb({ pathSegments })}
     <article class="article-layout h-entry" itemscope itemtype="http://schema.org/NewsArticle">
       <header class="article-header">
@@ -33,7 +34,12 @@ export default function articleLayout (args) {
         <div class="metadata">
           <address class="author-info p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
             ${vars.authorImgUrl
-              ? html`<img height="40" width="40"  src="${vars.authorImgUrl}" alt="${vars.authorImgAlt}" class="u-photo" itemprop="image">`
+              ? html`<picture>
+                                ${vars.authorImgDarkUrl
+                                  ? html`<source media="screen and (prefers-color-scheme: dark)" srcset="${vars.authorImgDarkUrl}">`
+                                  : null}
+                                <img height="40" width="40" src="${vars.authorImgUrl}" alt="${vars.authorImgAlt}" class="u-photo" itemprop="image">
+                              </picture>`
               : null
             }
             ${vars.authorName && vars.authorUrl
@@ -75,6 +81,4 @@ export default function articleLayout (args) {
     </article>
     ${breadcrumb({ pathSegments })}
   `)
-
-  return defaultRootLayout({ children: wrappedChildren, ...rest })
 }

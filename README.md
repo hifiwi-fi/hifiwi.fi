@@ -4,13 +4,7 @@
 
 [Hifiwi.fi](https://hifiwi.fi/) website.
 
-## Usage
-
-```
-npm install
-npm start
-npm build
-```
+See [CONTRIBUTING.md](CONTRIBUTING.md) for development and contribution guidelines.
 
 ## License
 

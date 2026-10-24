@@ -1,5 +1,5 @@
 /**
- * @import { LayoutFunction } from '@domstack/static'
+ * @import { LayoutFunction } from '@domstack/static/types.js'
  * @import { HtmlResult } from 'fragtml/types.js'
  * @import { RootLayoutVars } from './root.layout.js'
  */
@@ -15,13 +15,13 @@ import { breadcrumb } from '../components/breadcrumb/index.js'
  * }} BlogIndexVars
  */
 
-import defaultRootLayout from './root.layout.js'
+export const parentLayout = 'root'
 
 /** @type {LayoutFunction<BlogIndexVars, string | HtmlResult, string>} */
 export default function blogIndexLayout (args) {
-  const { children, ...rest } = args
+  const { children } = args
   const pathSegments = args.page.path.split(sep)
-  const wrappedChildren = render(html`
+  return render(html`
     ${breadcrumb({ pathSegments })}
     <h1>${args.vars.title}</h1>
     ${typeof children === 'string'
@@ -29,6 +29,4 @@ export default function blogIndexLayout (args) {
       : children
     }
   `)
-
-  return defaultRootLayout({ children: wrappedChildren, ...rest })
 }

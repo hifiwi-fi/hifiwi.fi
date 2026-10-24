@@ -1,5 +1,5 @@
 /**
- * @import {PageFunction} from '@domstack/static'
+ * @import {PageFunction} from '@domstack/static/types.js'
  */
 
 export const vars = {

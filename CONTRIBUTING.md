@@ -1,5 +1,45 @@
 # Contributing
 
+## Development setup
+
+```
+npm install
+npm start
+npm run build
+```
+
+## Site framework and styles
+
+The site uses DOMstack v12 (currently pinned to `12.0.0-beta.10`) and requires Node.js 24+ and npm 11+.
+
+The defaults are ejected: `src/layouts/root.layout.js` owns the document shell, and `src/globals/global.css` owns the Mine CSS v11, layout, and light/dark syntax-highlighting imports. `defaultStyle: false` in `src/globals/global.vars.js` disables the bundled defaults. Update these local files explicitly when adopting future default-style changes. Mine CSS follows the browser's color preference and requires native CSS nesting support.
+
+Blog listings, feeds, and the sitemap receive explicitly subscribed collections from `src/global.data.js`. Nested layouts declare `parentLayout` so DOMstack includes their ancestor assets automatically.
+
+The global-data producer uses DOMstack's `changes`, `previousState`, and `setState` hooks for progressive watch rebuilds. It retains structured-cloneable metadata keyed by `sourceId`, removes deleted sources, and invalidates cached feed HTML only for upserted pages. Unchanged feed articles reuse their rendered HTML; a reset rebuilds the cache. DOMstack fingerprints the published data keys and rebuilds only affected `dataDeps` subscribers. Keep page instances and render functions out of retained state.
+
+Run `npm test` to check lint, types, unit tests, and the production build. Run `npm run test:unit` for the global-data reset/delta regression tests. After stylesheet updates, visually check the home page, blog indexes, and articles in light/dark modes and at mobile/desktop widths.
+
+## Favicons
+
+Run `npm run generate-icon` after changing the logo. `favicon-config.js` selects the local blue logo and the manila background for Apple touch icons. `scripts/generate-icons.js` regenerates the PNG/ICO set in `src/favicons/` and synchronizes the root `src/favicon.ico` fallback. No Gravatar request is needed.
+
+## Browser verification
+
+Install the Playwright browsers once, then run the separate browser suite:
+
+```sh
+npx playwright install chromium webkit
+npm run browser:test
+npm run browser:report
+```
+
+On Linux CI, use `npx playwright install --with-deps chromium webkit` to install browser system dependencies too. Browser checks are intentionally separate from `npm test`.
+
+`playwright.config.js` starts and stops a production DOMstack preview on port 4173. The suite in `tests/site.spec.js` checks all six pages in Chromium and WebKit at desktop (1440×1000) and mobile (390×844) sizes, in light and dark modes. It verifies local responses, browser errors, image loading, horizontal overflow, theme variables, stylesheet ownership, and visible keyboard focus. External requests are stubbed so tests do not send analytics or depend on third-party availability.
+
+Each run saves full-page screenshots under `test-results/` and attaches them to the HTML report in `playwright-report/`; both directories are ignored by Git. These are screenshots for manual review, not approved pixel-diff baselines. Mobile projects emulate a mobile viewport/touch environment, not physical devices.
+
 ## Guidelines
 
 - Patches, ideas and changes welcome.

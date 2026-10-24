@@ -3,3 +3,5 @@ sandbox.js
 .nyc_output
 package-lock.json
 public
+playwright-report
+test-results

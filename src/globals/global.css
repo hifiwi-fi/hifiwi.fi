@@ -3,6 +3,102 @@
 @import 'highlight.js/styles/github.css' layer(domstack.default);
 @import 'highlight.js/styles/github-dark-dimmed.css' layer(domstack.default) (prefers-color-scheme: dark);
 
+:root {
+  --light-background: #f3e6c9;
+  --light-text: #503b2b;
+  --light-link-text: #19489a;
+  --light-accent-background: #e9d9b7;
+  --light-accent-midground: #c8b995;
+  --light-accent-foreground: #6b604d;
+  --light-control-border: #8b7b5e;
+  --dark-background: #24231f;
+  --dark-text: #f5eddb;
+  --dark-link-text: #a8c8ff;
+  --dark-accent-background: #33312a;
+  --dark-accent-midground: #514c40;
+  --dark-accent-foreground: #b9af9c;
+  --dark-control-border: #8d8270;
+}
+
+html {
+  background-color: var(--background);
+  background-image: url('../media/grain.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-blend-mode: multiply;
+}
+
+body {
+  min-block-size: 100svh;
+  background-color: transparent;
+}
+
+.site-title {
+  margin-block: 0;
+}
+
+.site-subtitle {
+  max-inline-size: 36ch;
+  margin: -0.5rem auto 2.5rem;
+  color: var(--accent-foreground);
+  font-family: var(--system-serif);
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.5;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.site-logo {
+  display: block;
+  inline-size: 280px;
+  max-inline-size: 100%;
+  margin-inline: auto;
+}
+
+.site-logo img {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background-blend-mode: screen;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  @supports (mask-image: url('')) {
+    .site-logo {
+      background-color: var(--text);
+      mask-image: var(--logo-mask);
+      mask-mode: alpha;
+      mask-size: contain;
+      mask-position: center;
+      mask-repeat: no-repeat;
+    }
+
+    /* Keep the image's dimensions and accessible name underneath the mask. */
+    .site-logo img {
+      opacity: 0;
+    }
+  }
+}
+
+@media print {
+  html,
+  body {
+    background: white;
+  }
+
+  /* WebKit can retain a picture's dark source when entering print mode. */
+  .site-logo img,
+  .author-info picture img {
+    filter: brightness(0);
+  }
+}
+
 .rounded-icon {
   border-radius: 3px;
 }
