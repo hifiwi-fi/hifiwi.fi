@@ -24,6 +24,7 @@
     "npm-run-all2": "^9.0.0",
     "p-map": "^7.0.2",
     "releasearoni": "^0.2.0",
+    "sharp": "^0.35.5",
     "typescript": "~7.0.2"
   },
   "dependencies": {
@@ -50,7 +51,8 @@
     "build:domstack": "domstack",
     "watch": "npm run clean && run-p watch:*",
     "watch:domstack": "npm run build:domstack -- --watch --drafts",
-    "generate-logos": "node scripts/generate-logos.js",
+    "generate-logos": "node scripts/generate-logos.js && npm run generate-media",
+    "generate-media": "node scripts/generate-media.js",
     "generate-icon": "node scripts/generate-icons.js",
     "clean": "rm -rf public && mkdir -p public",
     "start": "npm run watch",

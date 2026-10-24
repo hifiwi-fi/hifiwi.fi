@@ -20,9 +20,13 @@ The global-data producer uses DOMstack's `changes`, `previousState`, and `setSta
 
 Run `npm test` to check lint, types, unit tests, and the production build. Run `npm run test:unit` for the global-data reset/delta regression tests. After stylesheet updates, visually check the home page, blog indexes, and articles in light/dark modes and at mobile/desktop widths.
 
+## Media
+
+Run `npm run generate-media` after adding or changing PNG/JPEG files in `src/media/`. It keeps every original and creates a same-name WebP copy. PNGs use lossless WebP to preserve logo colors and transparency; JPEGs use quality 85. The site loads WebP media, while favicons stay PNG/ICO and social PNG exports remain available for platforms that need them. WebP files are tracked with Git LFS alongside the originals.
+
 ## Logos and favicons
 
-Run `npx playwright install chromium` once, then `npm run generate-logos` after changing the palette. The generator uses Chromium to resolve `--light-link-text` and `--dark-text` from `src/globals/global.css`, then colors the original white logo's alpha mask without flattening its transparency. The generated `src/media/hifiwifi-logo-theme-light.png` and `hifiwifi-logo-theme-dark.png` match the site's blue and cream colors. The dark-mode CSS mask continues to follow `var(--text)` live; the generated PNG also matches in places without that mask, such as article avatars.
+Run `npx playwright install chromium` once, then `npm run generate-logos` after changing the palette. The generator uses Chromium to resolve `--light-link-text` and `--dark-text` from `src/globals/global.css`, then colors the original white logo's alpha mask without flattening its transparency. The generated `src/media/hifiwifi-logo-theme-light.png` and `hifiwifi-logo-theme-dark.png` match the site's blue and cream colors. The command also regenerates the WebP copies used on the site. The dark-mode CSS mask continues to follow `var(--text)` live; the generated images also match in places without that mask, such as article avatars.
 
 The same command also generates opaque 1080 × 1080 social-media exports: `src/media/hifiwifi-social-light.png` (blue on `--light-background`) and `src/media/hifiwifi-social-dark.png` (cream on `--dark-background`). These have solid backgrounds, not transparency or screenshots of page content.
 

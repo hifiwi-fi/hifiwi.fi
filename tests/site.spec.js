@@ -40,7 +40,7 @@ for (const entry of pages) {
       if (colorScheme === 'dark') {
         const textColor = await page.locator('body').evaluate(element => window.getComputedStyle(element).color)
         await expect(mark).toHaveCSS('background-color', textColor)
-        expect(await mark.evaluate(element => window.getComputedStyle(element).maskImage)).toContain('hifiwifi-logo-white-ink-alpha.png')
+        expect(await mark.evaluate(element => window.getComputedStyle(element).maskImage)).toContain('hifiwifi-logo-white-ink-alpha.webp')
         await expect(mark.locator('img')).toHaveCSS('opacity', '0')
       } else {
         await expect(mark).toHaveCSS('mask-image', 'none')
@@ -74,7 +74,7 @@ for (const entry of pages) {
 
     const logo = page.locator('.site-logo img, .author-info img')
     if (await logo.count()) {
-      expect(await logo.evaluate(image => image.currentSrc)).toContain(`hifiwifi-logo-theme-${colorScheme}.png`)
+      expect(await logo.evaluate(image => image.currentSrc)).toContain(`hifiwifi-logo-theme-${colorScheme}.webp`)
       const colors = await logo.evaluate(image => {
         const canvas = document.createElement('canvas')
         canvas.width = image.naturalWidth
@@ -120,7 +120,7 @@ for (const entry of pages) {
     if (entry.name === 'home') {
       const oppositeScheme = colorScheme === 'dark' ? 'light' : 'dark'
       await page.emulateMedia({ colorScheme: oppositeScheme })
-      await expect.poll(() => logo.evaluate(image => image.currentSrc)).toContain(`hifiwifi-logo-theme-${oppositeScheme}.png`)
+      await expect.poll(() => logo.evaluate(image => image.currentSrc)).toContain(`hifiwifi-logo-theme-${oppositeScheme}.webp`)
 
       await page.emulateMedia({ media: 'print', colorScheme: 'dark' })
       await expect(logo).toHaveCSS('filter', 'brightness(0)')
