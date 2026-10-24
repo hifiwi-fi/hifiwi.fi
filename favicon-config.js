@@ -1,5 +1,5 @@
 export default {
-  source: './src/media/hifiwifi-logo-blue-ink-alpha.png',
+  source: './src/media/hifiwifi-logo-theme-light.png',
   dest: './src/favicons/',
   faviconConfig: {
     path: '/favicons/', // Path for overriding default icons path. `string`

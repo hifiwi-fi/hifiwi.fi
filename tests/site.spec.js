@@ -74,12 +74,39 @@ for (const entry of pages) {
 
     const logo = page.locator('.site-logo img, .author-info img')
     if (await logo.count()) {
-      const ink = colorScheme === 'dark' ? 'white' : 'blue'
-      expect(await logo.evaluate(image => image.currentSrc)).toContain(`hifiwifi-logo-${ink}-ink-alpha.png`)
+      expect(await logo.evaluate(image => image.currentSrc)).toContain(`hifiwifi-logo-theme-${colorScheme}.png`)
+      const colors = await logo.evaluate(image => {
+        const canvas = document.createElement('canvas')
+        canvas.width = image.naturalWidth
+        canvas.height = image.naturalHeight
+        const context = canvas.getContext('2d')
+        context.drawImage(image, 0, 0)
+        const pixels = context.getImageData(0, 0, canvas.width, canvas.height).data
+        let opaquePixel
+        for (let index = 0; index < pixels.length; index += 4) {
+          if (pixels[index + 3] === 255) {
+            opaquePixel = Array.from(pixels.slice(index, index + 3))
+            break
+          }
+        }
+        const swatch = document.createElement('span')
+        swatch.style.color = window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'var(--text)'
+          : 'var(--link-text)'
+        document.body.append(swatch)
+        const expected = window.getComputedStyle(swatch).color
+        swatch.remove()
+        return { actual: `rgb(${opaquePixel.join(', ')})`, expected }
+      })
+      expect(colors.actual).toBe(colors.expected)
     }
 
     await page.screenshot({ path: testInfo.outputPath(`${entry.name}.png`), fullPage: true })
     await testInfo.attach(entry.name, { path: testInfo.outputPath(`${entry.name}.png`), contentType: 'image/png' })
+    if (entry.name === 'home') {
+      await page.locator('.site-logo').screenshot({ path: testInfo.outputPath('logo.png') })
+      await testInfo.attach('Logo on site background', { path: testInfo.outputPath('logo.png'), contentType: 'image/png' })
+    }
 
     // WebKit on macOS uses Option-Tab to include links in keyboard navigation.
     await page.keyboard.press(browserName === 'webkit' && process.platform === 'darwin' ? 'Alt+Tab' : 'Tab')
@@ -93,8 +120,7 @@ for (const entry of pages) {
     if (entry.name === 'home') {
       const oppositeScheme = colorScheme === 'dark' ? 'light' : 'dark'
       await page.emulateMedia({ colorScheme: oppositeScheme })
-      const oppositeInk = oppositeScheme === 'dark' ? 'white' : 'blue'
-      await expect.poll(() => logo.evaluate(image => image.currentSrc)).toContain(`hifiwifi-logo-${oppositeInk}-ink-alpha.png`)
+      await expect.poll(() => logo.evaluate(image => image.currentSrc)).toContain(`hifiwifi-logo-theme-${oppositeScheme}.png`)
 
       await page.emulateMedia({ media: 'print', colorScheme: 'dark' })
       await expect(logo).toHaveCSS('filter', 'brightness(0)')

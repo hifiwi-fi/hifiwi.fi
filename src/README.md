@@ -4,8 +4,8 @@ dataDeps: [blogPostsHtml]
 ---
 <h1 class="site-title">
   <picture class="site-logo" style="--logo-mask: url('/media/hifiwifi-logo-white-ink-alpha.png')">
-    <source media="screen and (prefers-color-scheme: dark)" srcset="/media/hifiwifi-logo-white-ink-alpha.png">
-    <img height="280" width="280" src="/media/hifiwifi-logo-blue-ink-alpha.png" alt="HifiWi.fi">
+    <source media="screen and (prefers-color-scheme: dark)" srcset="/media/hifiwifi-logo-theme-dark.png">
+    <img height="280" width="280" src="/media/hifiwifi-logo-theme-light.png" alt="HifiWi.fi">
   </picture>
 </h1>
 

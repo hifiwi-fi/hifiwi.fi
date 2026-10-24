@@ -20,9 +20,13 @@ The global-data producer uses DOMstack's `changes`, `previousState`, and `setSta
 
 Run `npm test` to check lint, types, unit tests, and the production build. Run `npm run test:unit` for the global-data reset/delta regression tests. After stylesheet updates, visually check the home page, blog indexes, and articles in light/dark modes and at mobile/desktop widths.
 
-## Favicons
+## Logos and favicons
 
-Run `npm run generate-icon` after changing the logo. `favicon-config.js` selects the local blue logo and the manila background for Apple touch icons. `scripts/generate-icons.js` regenerates the PNG/ICO set in `src/favicons/` and synchronizes the root `src/favicon.ico` fallback. No Gravatar request is needed.
+Run `npx playwright install chromium` once, then `npm run generate-logos` after changing the palette. The generator uses Chromium to resolve `--light-link-text` and `--dark-text` from `src/globals/global.css`, then colors the original white logo's alpha mask without flattening its transparency. The generated `src/media/hifiwifi-logo-theme-light.png` and `hifiwifi-logo-theme-dark.png` match the site's blue and cream colors. The dark-mode CSS mask continues to follow `var(--text)` live; the generated PNG also matches in places without that mask, such as article avatars.
+
+The same command also generates opaque 1080 × 1080 social-media exports: `src/media/hifiwifi-social-light.png` (blue on `--light-background`) and `src/media/hifiwifi-social-dark.png` (cream on `--dark-background`). These have solid backgrounds, not transparency or screenshots of page content.
+
+Run `npm run generate-icon` after regenerating the logos. `favicon-config.js` selects the local blue logo and the manila background for Apple touch icons. `scripts/generate-icons.js` regenerates the PNG/ICO set in `src/favicons/` and synchronizes the root `src/favicon.ico` fallback. No Gravatar request is needed.
 
 ## Browser verification
 
